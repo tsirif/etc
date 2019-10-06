@@ -51,6 +51,20 @@ export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export C_INCLUDE_PATH=/usr/local/cuda/include${C_INCLUDE_PATH:+:${C_INCLUDE_PATH}}
 
+# conda initialize
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/case/local/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/case/local/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/case/local/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/case/local/anaconda3/bin${PATH:+:${PATH}}"
+    fi
+fi
+unset __conda_setup
+
 ################################################################################
 #                              Terminal Settings                               #
 ################################################################################
