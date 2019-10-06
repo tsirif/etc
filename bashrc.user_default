@@ -1,0 +1,12 @@
+# $HOME/.bashrc
+#
+# File '/home/case/etc/bashrc' is intended to 
+# be a template for users in the group `users`
+# 
+# Instructions:
+#	1. Copy file '/home/case/etc/bashrc' to '~/.bashrc'
+
+## Source `users` (group) definitions
+if [ -f /home/case/etc/bashrc ]; then
+  . "/home/case/etc/bashrc"
+fi
