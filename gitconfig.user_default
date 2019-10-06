@@ -1,0 +1,6 @@
+[user]
+  name = $GIT_SERVER_USERNAME
+  email = $GIT_SERVER_USEREMAIL
+
+[include]
+  path = /home/case/etc/gitconfig
