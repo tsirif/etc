@@ -50,6 +50,7 @@ alias du='du -kh'
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 export C_INCLUDE_PATH=/usr/local/cuda/include${C_INCLUDE_PATH:+:${C_INCLUDE_PATH}}
+export CUDA_HOME=/usr/local/cuda
 
 # conda initialize
 # !! Contents within this block are managed by 'conda init' !!
@@ -133,4 +134,9 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash-completion ]; then
     . /etc/bash_completion
   fi
+fi
+
+# Start SSH agent, if there is none
+if [[ ! "$SSH_AUTH_SOCK" ]]; then
+    eval "$(ssh-agent -s)"
 fi
